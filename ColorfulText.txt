@@ -1,0 +1,31 @@
+var flipCoin = function(){ // Returns true or false
+  if(Math.random() > 0.5){
+    return true;
+  } else {
+    return false;
+  }
+}
+ 
+// setTimeout runs a given function after a certain time period.
+// clearTimeout(x) stops a timer before it fires.
+ 
+// clearInterval(x) stops a looping timer.
+// setInterval runs a given function after a certain time period in a loop.
+ 
+var space = " ";
+ 
+var myIntervalTimer = setInterval(function(){ // Runs once every 10 milliseconds.
+  space += " ";
+  if(space.length > 20){
+    space = " ";
+  }
+  if(flipCoin()){
+    console.log('%c'+space+"Ligtning flash-what I though were faces", 'color: red; font-size: '+Math.round(Math.random()*50)+'px;');
+  } else {
+    console.log('%c'+space+"are plumes of pampas grass", 'color: green; font-size: '+Math.round(Math.random()*50)+'px;');
+  }
+}, 70);
+ 
+setTimeout(function(){ // In 10 seconds we stop setInterval from running.
+  clearInterval(myIntervalTimer);
+}, 1000 * 20);
