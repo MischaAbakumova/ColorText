@@ -6,11 +6,6 @@ var flipCoin = function(){ // Returns true or false
   }
 }
  
-// setTimeout runs a given function after a certain time period.
-// clearTimeout(x) stops a timer before it fires.
- 
-// clearInterval(x) stops a looping timer.
-// setInterval runs a given function after a certain time period in a loop.
  
 var space = " ";
  
